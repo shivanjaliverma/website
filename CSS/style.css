@@ -1,0 +1,260 @@
+/* @font-face {
+   font-family: "Source Serif Pro";
+   src: url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200&display=swap');
+} */
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200&display=swap");
+
+body {
+  background-color: white;
+  font-family: "Source Serif Pro", serif;
+  margin: -0.5vw 0px;
+}
+.navigationbar {
+  background-color: #0b1933;
+  padding-left: 7vw;
+  padding-right: 7vw;
+  padding-top: 2vw; /*padding = inside of the box*/
+  padding-bottom: 1vw;
+  /* margin-top: 0.4vw; margin = outside of the box */
+ position: fixed;
+ width: 100vw;
+ top: 0px;
+ left: 0px;
+}
+
+
+#links {
+  /*navigation bar links - work,about,contact*/
+  float: right;
+  text-decoration: none;
+  font-size: 22px;
+  width: auto;
+  text-align: left;
+  /* font-family: "Times New Roman", Times, serif; calling the font*/
+  width: auto;
+  margin-top: -9px;
+  margin-right: 0;
+  display:inline-block;
+  margin-right: 14vw;
+}
+#links a {
+  color: white;
+}
+
+a.firstlink {
+  margin-right: 50px;
+}
+
+#name {
+  /*shivanjali-verma // #selectors*/
+  width: 50%;
+  font-size: 30px;
+  font-style: normal;
+  /* font-family:Helvetica;  */
+  text-decoration: none;
+  color: white;
+  margin-top:-12px;
+  display:inline-block;
+}
+
+/* is that a class? Is this going to affect 
+just this or all the links that we would put
+in the body?*/
+a:link {
+  text-decoration: none;
+}
+#name a {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#ham {
+  float: right;
+  margin-top: -13px;
+  display: none;
+  height: 20%;
+}
+
+
+.container {
+  margin-top: 6vw;
+}
+
+.aboutmyself {
+margin-top: 6vw;
+}
+.myimage-container {
+  display: flex;
+  margin-left:7vw;
+  margin-right:7vw;
+}
+
+
+#myimg {
+  width: 20vw;
+  height: auto;
+  margin-top: 40px;
+  margin-bottom: 42px;
+  border: 3px solid #0b1933;
+  border-radius: 8px;
+}
+
+
+.myimg-content {
+    flex: 50%;
+    position: relative;
+    text-align:center;
+    margin-top: 120px;
+    margin-bottom: 90px;
+    margin-right: 20px;
+    font-size: 45px;
+}
+
+.example {
+  /* position: fixed;
+   bottom: 2px;
+   left: 34px; */
+  margin: 4px;
+  margin-left: 10vw;
+  /* border-style: double;
+   border-width:4px;
+   border-color:pink; */
+  border: 4px solid #0b1933;
+  border-radius: 12px;
+  text-align: center;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+ .gridbox{
+   /* background-color: yellow; */
+   display:grid;
+   grid-template-columns: repeat(3,2fr);
+   gap:25px;
+   margin:40px 7vw;
+   grid-auto-rows:minmax(300px, auto);
+} 
+
+.boxes {
+   background-color:  #0b1933;
+   transition-property: all;
+   transition-duration: 300ms;
+   transition-timing-function: linear;
+   /* transition-delay: 2s; */
+   color:white;
+   
+}
+.boxes p {
+  /*regular state*/
+z-index: 10;
+text-align:center;
+ opacity:0;
+ position: absolute;
+ display: inline-block;
+ margin: 143px 57px;
+}
+
+
+.boxes:hover {
+  background-color: red;
+  color:yellow;
+  box-shadow: 5px 10px 20px blue;
+}
+
+
+.boxes:hover img {
+ opacity:0;
+}
+
+.boxes img{
+  transition: all 300ms linear;
+}
+ 
+
+.boxes:hover p {
+  /*onstate*/
+  opacity: 1;
+}
+
+.boxes:hover a {
+  /*onstate*/
+  color: purple;
+}
+
+.boxes a {
+width:100%;
+height:100%;
+display:block;
+text-decoration: none;
+color: white;
+}
+
+.current {
+  background-color: red !important;
+
+}
+
+a.current {
+  background-color: red !important;
+
+}
+
+.myintro{
+  display: flex;
+  margin-left:7vw;
+  margin-right:7vw;
+}
+
+
+.aboutmyself {
+  height: 250px;
+}
+
+.aboutimage {
+  display: flex;
+  margin-left:7vw;
+  margin-right:7vw;
+  margin-top: 20px;
+}
+
+.aboutcontent {
+  position: relative;
+  display: flex;
+  margin-left:7vw;
+  margin-right:7vw;
+  margin-top: -28px;
+  
+}
+
+.skills {
+  background-color: red;
+  height: 100px;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  body {
+    background-color: white;
+  }
+  #links {
+    display: none; /*visibility:hidden, opacity:0*/
+  }
+  #ham {
+    display: inline;
+  }
+}
+
